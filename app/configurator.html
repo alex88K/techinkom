@@ -1,0 +1,318 @@
+//= html_includes/_head.html
+
+<body>
+	<div class="wrapper">
+
+		//= html_includes/_header.html
+
+		<main class="main">
+			<div class="breadcrumb">
+				<div class="container">
+					<ul>
+						<li><a href="/">Главная</a></li>
+						<li>Конфигуратор</li>
+					</ul>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="container">
+					<article class="article configurator">
+						<h1>Конфигуратор</h1>
+						
+						<form action="#" class="configurator-form">
+							<ul class="stages">
+								<li class="stage-item">
+									<div class="stage-title">Шаг 1 - выберите тип кузова автомобиля</div>
+									<div class="stage-content">
+										<ul class="type-list">
+											<li class="type-item">
+												<input type="radio" name="bodytype" id="bodytype-1">
+												<label for="bodytype-1">
+													<div class="type-img">
+														<img src="img/trucks-i/c1.png" alt="бортовые и фургоны">
+													</div>
+													<span>бортовые и фургоны</span>
+												</label>
+											</li>
+											<li class="type-item">
+												<input type="radio" name="bodytype" id="bodytype-2">
+												<label for="bodytype-2">
+													<div class="type-img">
+														<img src="img/trucks-i/c2.png" alt="самосвалы">
+													</div>
+													<span>самосвалы</span>
+												</label>
+											</li>
+											<li class="type-item">
+												<input type="radio" name="bodytype" id="bodytype-3">
+												<label for="bodytype-3">
+													<div class="type-img">
+														<img src="img/trucks-i/c3.png" alt="седельные тягачи">
+													</div>
+													<span>седельные тягачи</span>
+												</label>
+											</li>
+											<li class="type-item">
+												<input type="radio" name="bodytype" id="bodytype-4">
+												<label for="bodytype-4">
+													<div class="type-img">
+														<img src="img/trucks-i/c4.png" alt="шасси">
+													</div>
+													<span>шасси</span>
+												</label>
+											</li>
+											<li class="type-item">
+												<input type="radio" name="bodytype" id="bodytype-5">
+												<label for="bodytype-5">
+													<div class="type-img">
+														<img src="img/trucks-i/c5.png" alt="спецтехника">
+													</div>
+													<span>спецтехника</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="stage-item">
+									<div class="stage-title">Шаг 2 - колесная формула</div>
+									<div class="stage-content">
+										<ul class="wheel-type">
+											<li class="wheel-type-item">
+												<div class="radio">
+													<input type="radio" name="wheeltype" id="wheeltype-1">
+													<label for="wheeltype-1">
+														<span>4x2</span>
+													</label>
+													<div class="check">&nbsp;</div>
+												</div>
+											</li>
+											<li class="wheel-type-item">
+												<div class="radio">
+													<input type="radio" name="wheeltype" id="wheeltype-2">
+													<label for="wheeltype-2">
+														<span>4x4</span>
+													</label>
+													<div class="check">&nbsp;</div>
+												</div>
+											</li>
+											<li class="wheel-type-item">
+												<div class="radio">
+													<input type="radio" name="wheeltype" id="wheeltype-3">
+													<label for="wheeltype-3">
+														<span>6x4</span>
+													</label>
+													<div class="check">&nbsp;</div>
+												</div>
+											</li>
+											<li class="wheel-type-item">
+												<div class="radio">
+													<input type="radio" name="wheeltype" id="wheeltype-4">
+													<label for="wheeltype-4">
+														<span>6x6</span>
+													</label>
+													<div class="check">&nbsp;</div>
+												</div>
+											</li>
+											<li class="wheel-type-item">
+												<div class="radio">
+													<input type="radio" name="wheeltype" id="wheeltype-5">
+													<label for="wheeltype-5">
+														<span>8x6</span>
+													</label>
+													<div class="check">&nbsp;</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="stage-item">
+									<div class="stage-title">Шаг 3 - грузоподъемность</div>
+									<div class="stage-content">
+										<div class="select stages-select">
+											<select name="carrying" id="carrying">
+												<option value="0">- не выбрано -</option>
+												<option value="20">20 000</option>
+												<option value="30">30 000</option>
+												<option value="40">40 000</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								<li class="stage-item">
+									<div class="stage-title">Шаг 4 - тип кузова</div>
+									<div class="stage-content">
+										<div class="select stages-select">
+											<select name="bodytype" id="bodytype">
+												<option value="0">- не выбрано -</option>
+												<option value="1">тип 1</option>
+												<option value="2">тип 2</option>
+												<option value="3">тип 3</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								<li class="stage-item">
+									<div class="stage-title">Конфигурация</div>
+									<div class="stage-content">
+										<table class="configurator-table">
+											<tr>
+												<td>Тип техники</td>
+												<td>Автомобиль с КМУ</td>
+											</tr>
+											<tr>
+												<td>Колесная формула</td>
+												<td>6x4</td>
+											</tr>
+											<tr>
+												<td>Грузоподъемность</td>
+												<td>10400</td>
+											</tr>
+											<tr>
+												<td>Тип кузова</td>
+												<td>рефрижератор</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+							</ul>
+							<ul class="results clearfix">
+								<li class="results-item">
+									<div class="product-card">
+										<div class="sticker sticker-new">Новинка</div>
+										<div class="sticker sticker-instock">В наличии</div>
+										<a href="product-card.html" class="product-img">
+											<img src="pic/catalog/kamaz-1.jpg" alt="Камаз">
+										</a>
+										<a href="product-card.html" class="product-title">Самосвал КАМАЗ-53605</a>
+										<a href="product-card.html" class="product-details">
+											<div class="details-line"><i class="weight-i details-i" title="грузоподъемность"></i>13.4 т</div>
+											<div class="details-line"><i class="engine-i details-i" title="двигатель"></i>740.632-400 (Е-4)</div>
+											<div class="details-line"><i class="gearbox-i details-i" title="коробка передач"></i>ZF 16S 151</div>
+											<div class="details-line"><i class="tank-i details-i" title="бак"></i>360 л</div>
+										</a>
+										<div class="product-price">Цена по запросу</div>
+										<div class="product-btn-group">
+											<a href="/" class="btn btn-blue">Заказать</a>
+											<a href="" class="btn btn-t btn-twl">Кредит<br>лизинг</a>
+										</div>
+									</div>
+								</li>
+								<li class="results-item">
+									<div class="product-card">
+										<div class="sticker sticker-new">Новинка</div>
+										<div class="sticker sticker-instock">В наличии</div>
+										<a href="product-card.html" class="product-img">
+											<img src="pic/catalog/kamaz-2.jpg" alt="Камаз">
+										</a>
+										<a href="product-card.html" class="product-title">Самосвал КАМАЗ-53605</a>
+										<a href="product-card.html" class="product-details">
+											<div class="details-line"><i class="weight-i details-i" title="грузоподъемность"></i>13.4 т</div>
+											<div class="details-line"><i class="engine-i details-i" title="двигатель"></i>740.632-400 (Е-4)</div>
+											<div class="details-line"><i class="gearbox-i details-i" title="коробка передач"></i>ZF 16S 151</div>
+											<div class="details-line"><i class="tank-i details-i" title="бак"></i>360 л</div>
+										</a>
+										<div class="product-price">Цена по запросу</div>
+										<div class="product-btn-group">
+											<a href="/" class="btn btn-blue">Заказать</a>
+											<a href="" class="btn btn-t btn-twl">Кредит<br>лизинг</a>
+										</div>
+									</div>
+								</li>
+								<li class="results-item">
+									<div class="product-card">
+										<div class="sticker sticker-new">Новинка</div>
+										<div class="sticker sticker-instock">В наличии</div>
+										<a href="product-card.html" class="product-img">
+											<img src="pic/catalog/kamaz-3.jpg" alt="Камаз">
+										</a>
+										<a href="product-card.html" class="product-title">Самосвал КАМАЗ-53605</a>
+										<a href="product-card.html" class="product-details">
+											<div class="details-line"><i class="weight-i details-i" title="грузоподъемность"></i>13.4 т</div>
+											<div class="details-line"><i class="engine-i details-i" title="двигатель"></i>740.632-400 (Е-4)</div>
+											<div class="details-line"><i class="gearbox-i details-i" title="коробка передач"></i>ZF 16S 151</div>
+											<div class="details-line"><i class="tank-i details-i" title="бак"></i>360 л</div>
+										</a>
+										<div class="product-price">Цена по запросу</div>
+										<div class="product-btn-group">
+											<a href="/" class="btn btn-blue">Заказать</a>
+											<a href="" class="btn btn-t btn-twl">Кредит<br>лизинг</a>
+										</div>
+									</div>
+								</li>
+								<li class="results-item">
+									<div class="product-card">
+										<div class="sticker sticker-new">Новинка</div>
+										<div class="sticker sticker-instock">В наличии</div>
+										<a href="product-card.html" class="product-img">
+											<img src="pic/catalog/kamaz-3.jpg" alt="Камаз">
+										</a>
+										<a href="product-card.html" class="product-title">Самосвал КАМАЗ-53605</a>
+										<a href="product-card.html" class="product-details">
+											<div class="details-line"><i class="weight-i details-i" title="грузоподъемность"></i>13.4 т</div>
+											<div class="details-line"><i class="engine-i details-i" title="двигатель"></i>740.632-400 (Е-4)</div>
+											<div class="details-line"><i class="gearbox-i details-i" title="коробка передач"></i>ZF 16S 151</div>
+											<div class="details-line"><i class="tank-i details-i" title="бак"></i>360 л</div>
+										</a>
+										<div class="product-price">Цена по запросу</div>
+										<div class="product-btn-group">
+											<a href="/" class="btn btn-blue">Заказать</a>
+											<a href="" class="btn btn-t btn-twl">Кредит<br>лизинг</a>
+										</div>
+									</div>
+								</li>
+								<li class="results-item">
+									<div class="product-card">
+										<div class="sticker sticker-new">Новинка</div>
+										<div class="sticker sticker-instock">В наличии</div>
+										<a href="product-card.html" class="product-img">
+											<img src="pic/catalog/kamaz-1.jpg" alt="Камаз">
+										</a>
+										<a href="product-card.html" class="product-title">Самосвал КАМАЗ-53605</a>
+										<a href="product-card.html" class="product-details">
+											<div class="details-line"><i class="weight-i details-i" title="грузоподъемность"></i>13.4 т</div>
+											<div class="details-line"><i class="engine-i details-i" title="двигатель"></i>740.632-400 (Е-4)</div>
+											<div class="details-line"><i class="gearbox-i details-i" title="коробка передач"></i>ZF 16S 151</div>
+											<div class="details-line"><i class="tank-i details-i" title="бак"></i>360 л</div>
+										</a>
+										<div class="product-price">Цена по запросу</div>
+										<div class="product-btn-group">
+											<a href="/" class="btn btn-blue">Заказать</a>
+											<a href="" class="btn btn-t btn-twl">Кредит<br>лизинг</a>
+										</div>
+									</div>
+								</li>
+								<li class="results-item">
+									<div class="product-card">
+										<div class="sticker sticker-new">Новинка</div>
+										<div class="sticker sticker-instock">В наличии</div>
+										<a href="product-card.html" class="product-img">
+											<img src="pic/catalog/kamaz-2.jpg" alt="Камаз">
+										</a>
+										<a href="product-card.html" class="product-title">Самосвал КАМАЗ-53605</a>
+										<a href="product-card.html" class="product-details">
+											<div class="details-line"><i class="weight-i details-i" title="грузоподъемность"></i>13.4 т</div>
+											<div class="details-line"><i class="engine-i details-i" title="двигатель"></i>740.632-400 (Е-4)</div>
+											<div class="details-line"><i class="gearbox-i details-i" title="коробка передач"></i>ZF 16S 151</div>
+											<div class="details-line"><i class="tank-i details-i" title="бак"></i>360 л</div>
+										</a>
+										<div class="product-price">Цена по запросу</div>
+										<div class="product-btn-group">
+											<a href="/" class="btn btn-blue">Заказать</a>
+											<a href="" class="btn btn-t btn-twl">Кредит<br>лизинг</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</form>
+					</article>
+				</div>
+			</div>
+		</main>
+		
+		//= html_includes/_footer.html
+
+<div class="radio">
+	<label for="delivery-2">До склада ТК в моем городе</label>
+   <input type="radio" id="delivery-2" name="deliveryType">
+   <div class="check"></div>
+</div>

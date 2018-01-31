@@ -24,6 +24,13 @@ $(function() {
 	});
 
 
+	// Collapse
+
+	$("[data-toggle=collapse").on("click", function() {
+		$(this).toggleClass("opened")
+	});
+
+
 	// Sliders
 
 	$(".promo-slider").slick({
