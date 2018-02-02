@@ -79,6 +79,7 @@ gulp.task('js:build', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+		'app/libs/range-slider/bootstrap-slider.min.js',
 		'app/libs/fancybox/dist/jquery.fancybox.min.js',
 		'app/libs/maskedInput/maskedInput.min.js',
 		'app/libs/slick/slick.js',

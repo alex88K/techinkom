@@ -216,6 +216,8 @@ textarea
 input.error
 	border: 1px solid #f81d17 !important
 
+// radio 
+
 .radio
 	color: #56595c
 	display: block
@@ -255,17 +257,67 @@ input.error
 			width: 8px
 			top: 5px
 			left: 5px
-
-.radio:hover
-	.check
-		border-color: #777
-	label
-		color: inherit
+	&:hover
+		.check
+			border-color: #777
+		label
+			color: inherit
 
 input[type=radio]:checked ~ .check
 	border: 1px solid #aeafc4
 	&:before
 		background: #aeafc4
+
+// checkbox
+
+.checkbox
+	position: relative
+	margin: 15px auto
+	label
+		padding-left: 25px
+		cursor: pointer
+		transition: all .3s ease
+		&:before
+			content: ''
+			position: absolute
+			top: 2px
+			left: 0
+			width: 16px
+			height: 16px
+			cursor: pointer
+			border-radius: 4px
+			background-color: #fff
+			border: 1px solid #cacaca
+			transition: all .3s ease
+		&:after
+	      content: ''
+	      width: 10px
+	      height: 5px
+	      position: absolute
+	      top: 6px
+	      left: 4px
+	      border: 3px solid #fff
+	      border-top: none
+	      border-right: none
+	      background: transparent
+	      opacity: 0
+	      transform: rotate(-45deg)
+	      transition: all .3s ease
+	&:hover 
+		label:after
+			opacity: .5
+		label:before
+			opacity: .5
+			background-color: #004e9f
+			border-color: #004e9f
+	input[type=checkbox]
+		display: none
+		&:checked + label
+			&:after
+				opacity: 1
+			&:before
+				background-color: #004e9f
+				border-color: #004e9f
 
 .select
 	height: 40px
@@ -1812,6 +1864,222 @@ article.content
 		border: 2px solid #eef0f4
 		border-bottom: none
 		border-top: none
+
+// filter
+
+.filter
+	margin-bottom: 10px
+	padding: 15px 10px 8px 10px
+	background-color: #eef0f4
+	&-form
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&-b
+		padding: 0 20px
+		border-left: 1px solid #c5d3e4
+		&:first-child
+			border-left: none
+		&-col-2
+			max-width: 200px
+			.filter-b-list
+				column-count: 2
+		&-title
+			display: block
+			margin-bottom: 2px
+			font-size: 13px
+			color: #56595c
+		.checkbox
+			margin: 0
+			label
+				margin-bottom: 0
+				font-size: 13px
+				font-weight: bold
+				color: #333
+		&-range-slider
+			span
+				font-size: 13px
+				color: #56595c
+			input
+				width: 48px
+				height: 16px
+				padding: 0 4px
+				border-radius: 4px
+				border: 1px solid #cacaca
+				font-size: 13px
+				font-weight: bold
+				color: #333
+				line-height: 1
+				text-align: center
+		button[type="submit"]
+			display: block
+			min-width: 90px
+			margin: 0 0 .3em 0
+			padding: 3px 10px
+			text-transform: none
+			font-weight: normal
+		&-centered
+			display: flex
+			flex-direction: column
+			flex-wrap: wrap
+			justify-content: center
+	.btn-reset
+		padding: 0
+		background-color: transparent
+		border: none
+		text-decoration: underline
+		font-size: 14px
+		color: #004e9f
+		cursor: pointer
+		&:focus
+			outline: none
+		&:hover
+			text-decoration: none
+	& > .btn-group
+		margin: 10px 0 0 0
+		padding: 4px 0 0 0
+		border-top: 1px solid #c5d3e4
+
+.slider.slider-horizontal
+	width: 145px
+	height: 3px
+	.slider-track
+		height: 3px
+		margin-top: 1px
+		box-shadow: none
+		background: #cacaca
+	.slider-handle
+		width: 9px
+		height: 9px
+		margin-left: -5px
+		background: #004e9f
+		box-shadow: none
+		cursor: pointer
+
+.slider-selection
+	background: #004e9f
+	box-shadow: none
+
+.slider
+	vertical-align: none
+	.tooltip.top.in
+		opacity: 1
+
+.show-filter
+	padding: 0
+	background-color: transparent
+	border: none
+	font-size: 14px
+	color: #004e9f
+	cursor: pointer
+	&:focus
+		outline: none
+	&:hover
+		text-decoration: underline
+	.arrow-down-i
+		position: relative
+		top: 1px
+		width: 11px
+		height: 11px
+		transform: rotate(90deg)
+		margin-left: 10px
+
+.sort
+	position: relative
+	top: 5px
+	float: right
+	span
+		margin-right: 5px
+		font-size: 13px
+		color: #ababab
+	select
+		background-color: transparent
+		border: none
+		font-size: 13px
+		color: #333
+		border-bottom: 1px dashed #333
+		cursor: pointer
+		&:focus
+			outline: none
+	.view-select
+		position: relative
+		top: 3px
+		display: inline-block
+		margin-left: 15px
+	.view-tile,
+	.view-list
+		margin-left: 10px
+		padding: 0
+		background: transparent
+		border: none
+		cursor: pointer
+		&:hover svg,
+		&.active svg
+			fill: #004e9f
+
+.view-option:focus
+	outline: none
+
+.tiles-i,
+.list-i
+	width: 13px
+	height: 13px
+	fill: #ababab
+
+.category-list
+	margin: 0 -7px
+	padding: 0
+	list-style-type: none
+	.category-item
+		float: left
+		margin: 0 5px 10px 5px
+	.product-card
+		background-color: #eef0f4
+	&[data-view=view-list]
+		margin: 0
+		.category-item
+			float: none
+			display: block
+			width: 100%
+			margin: 0 0 10px 0
+		.product-card
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			width: 100%
+			height: 135px
+			padding: 0
+			.product-img
+				width: 235px
+				height: 100%
+			.product-title
+				padding: 0 10px 7px 10px
+			.product-details
+				margin-bottom: 5px
+				column-count: 2
+			.details-line
+				margin-bottom: 10px
+			.product-price
+				padding: 0 20px 3px 10px
+			.product-btn-group
+				padding: 5px 20px 0 20px
+				.btn
+					width: 100%
+					margin: .2em 0
+			.sticker-discount
+				right: inherit
+				left: 190px
+			&-body
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				padding: 10px 0
+			&-footer
+				display: flex
+				flex-direction: column
+				align-self: flex-end
+				align-content: flex-end
+				padding: 10px 0
 
 // Contacts
 

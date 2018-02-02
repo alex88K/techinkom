@@ -24,6 +24,32 @@ $(function() {
 	});
 
 
+	// range slider
+
+	if ($("#rangeslCarrying").length) {
+		var rangeSl = $("#rangeslCarrying").slider({
+			tooltip: 'hide'
+		});
+
+		$("#startSliderInput").prop( 'value', rangeSl.slider('getValue')[0] );
+		$("#currentSliderInput").prop( 'value', rangeSl.slider('getValue')[1] );
+	}
+
+	$("#rangeslCarrying").on("slide", function(slideEvt) {
+		$("#startSliderInput").prop( 'value', rangeSl.slider('getValue')[0] );
+		$("#currentSliderInput").prop( 'value', rangeSl.slider('getValue')[1] );
+	});
+
+
+	// Switch viewlist
+
+	$(".view-select .view-option").on("click", function() {
+		$(".view-select .view-option").removeClass("active");
+		$(this).addClass("active");
+		
+		$(".category-list").attr("data-view", $(this).data("view"));
+	});
+
 	// Collapse
 
 	$("[data-toggle=collapse").on("click", function() {
@@ -51,7 +77,8 @@ $(function() {
 		arrows: true,
 		nextArrow: $(".spec-products .slick-next"),
 		prevArrow: $(".spec-products .slick-prev"),
-		dots: false
+		dots: false,
+		vertical: false
 	});
 
 	$(".related-slider").slick({
