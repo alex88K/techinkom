@@ -1,4 +1,10 @@
 $(function() {
+	$(".navbar-collapse").mmenu({
+		wrappers: ["bootstrap4"],
+		navbar: {
+			title: ""
+		}
+   });
 
 	// Fancybox
 
@@ -56,6 +62,38 @@ $(function() {
 		$(this).toggleClass("opened")
 	});
 
+	$(".aside-catalog-nav-btn").on("click", function() {
+		$(".aside-nav").slideToggle(400);
+	});
+
+	$(".filter-btn").on("click", function() {
+		$(".filter").slideToggle(400);
+	});
+
+	/*--Search form-----------------------*/
+
+	$('.search-mob-btn').on('click', function(e) {
+		e.stopPropagation();
+
+		var searchForm = $('.search-form');
+
+		if (searchForm.hasClass("in-active")) {
+			searchForm.removeClass('in-active');
+			$("body").removeClass("search-opened");
+		} else {
+			$('.search-form').addClass('in-active').find('input').focus();
+			$("body").addClass('search-opened');
+		}
+	});
+
+	$(document).on('mouseup', function(e) {
+		var search_pc = $('.search-form');
+
+		if ( !search_pc.is(e.target) && search_pc.has(e.target).length === 0 ) {
+			search_pc.removeClass('in-active');
+			$("body").removeClass("search-opened");
+		}
+	});
 
 	// Sliders
 
@@ -63,11 +101,18 @@ $(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		infinite: true,
-		arrows: true,
 		nextArrow: $(".promo .slick-next"),
 		prevArrow: $(".promo .slick-prev"),
 		dots: true,
-		fade: true
+		fade: true,
+		responsive: [{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false
+			}
+		}]
 	});
 
 	$(".spec-products-slider").slick({
@@ -78,7 +123,24 @@ $(function() {
 		nextArrow: $(".spec-products .slick-next"),
 		prevArrow: $(".spec-products .slick-prev"),
 		dots: false,
-		vertical: false
+		vertical: false,
+		responsive: [{
+			breakpoint: 767,
+			settings: {
+				arrows: false,
+				autoplaySpeed: 3000,
+			}
+		},
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 1,
+				autoplaySpeed: 3000,
+				centerMode: true,
+				variableWidth: true,
+				arrows: false
+			}
+		}]
 	});
 
 	$(".related-slider").slick({
@@ -88,7 +150,32 @@ $(function() {
 		arrows: false,
 		dots: false,
 		autoplay: true,
-  		autoplaySpeed: 3000
+  		autoplaySpeed: 3000,
+  		responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			}
+		},
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				autoplaySpeed: 3000,
+				centerMode: true,
+				variableWidth: true,
+				arrows: false
+			}
+		}]
 	});
 
 	$(".banner-slider").slick({
@@ -124,7 +211,7 @@ $(function() {
 		arrows: true,
 		responsive: [
 		{
-			breakpoint: 576,
+			breakpoint: 767,
 			settings: {
 				vertical: false,
 			}
@@ -143,7 +230,7 @@ $(document).on('af_complete', function(event,response) {
 		$('#success-modal').modal('show');
 	}
 });
-
+// 
 
 // load SVG-Sprite to LocalStorage
 
@@ -151,7 +238,7 @@ $(document).on('af_complete', function(event,response) {
 	'use strict';
 
 	var file = 'img/sprite.svg',
-	revision = 2;
+	revision = 3;
 
 	if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 		return true;

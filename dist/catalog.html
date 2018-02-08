@@ -37,9 +37,14 @@
 					<div class="top-b site-title">ООО «ТЕХИНКОМ-Комтранс» — официальный дилер ПАО «КАМАЗ»</div>
 					<div class="top-b">
 						<div class="search">
+							<button type="button" class="search-mob-btn">
+								<svg class="lens-i"><use xlink:href="#lens"></use></svg>
+							</button>
 							<form action="#" class="search-form">
-								<input type="text" name="search" class="toggle" id="search-input">
-								<button type="submit" name="submit" class="search-btn"><svg class="lens-i"><use xlink:href="#lens"></use></svg></button>
+								<input type="text" name="search" class="toggle" id="search-input" placeholder="Поиск по сайту...">
+								<button type="submit" name="submit" class="search-btn">
+									<svg class="lens-i"><use xlink:href="#lens"></use></svg>
+								</button>
 							</form>
 						</div>
 					</div>
@@ -58,12 +63,12 @@
 						<svg class="pin-i"><use xlink:href="#pin"></use></svg>
 						<div class="contact-data"><a href="/">Санкт-Петербург</a> Грузовой проезд, дом 27<div class="time">9:00-18:00 пн-пт</div></div>
 					</div>
-					<div class="contact-b">
+					<div class="contact-b contact-callback">
+						<button type="button" data-toggle="modal" data-target="#callback-modal" class="btn">Обратный звонок</button>
+					</div>
+					<div class="contact-b contact-tel">
 						<div class="contact-tel-sign">Многоканальный телефон</div>
 						<a href="tel:+74959743747" class="tel"> +7 (495) 974-37-47</a>
-					</div>
-					<div class="contact-b">
-						<button type="button" data-toggle="modal" data-target="modal-callback" class="btn">Обратный звонок</button>
 					</div>
 				</div>
 		
@@ -124,111 +129,107 @@
 			</div>
 			<div class="inner">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-3 col-md-3">
-							
-							<aside class="aside">
-								<div class="aside-b">
-									<ul class="aside-nav">
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>бортовые автомобили</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>Самосвалы</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>седельные тягачи</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>автофургоны</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>шасси</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>автокраны</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>автомобили с кму</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>спецтехника</a></li>
-										<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>коммунальная техника</a></li>
-									</ul>
-								</div>
-							
-								<div class="aside-b">
-									<a href="configurator.html" class="config-link">Конфигуратор<svg class="arrow-classic-i"><use xlink:href="#arrow-circ"></use></svg></a>
-								</div>
-							
-								<div class="aside-b">
-									<div class="banner">
-										<a href="/"><img src="pic/banner/banner.jpg" alt="Banner"></a>
-										<div class="banner-slider">
-											<div class="banner-slide"><a href="/"><img src="pic/banner/banner2.jpg" alt="Banner"></a></div>
-											<div class="banner-slide"><a href="/"><img src="pic/banner/banner2.jpg" alt="Banner"></a></div>
-											<div class="banner-slide"><a href="/"><img src="pic/banner/banner2.jpg" alt="Banner"></a></div>
-										</div>
-									</div>
-								</div>
-							</aside>
-
+					<aside class="aside">
+						<div class="aside-b">
+							<div class="aside-catalog-nav">
+								<button type="button" class="aside-catalog-nav-btn">Каталог</button>
+								<ul class="aside-nav">
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>бортовые автомобили</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>Самосвалы</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>седельные тягачи</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>автофургоны</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>шасси</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>автокраны</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>автомобили с кму</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>спецтехника</a></li>
+									<li class="aside-nav-item"><a href="/"><svg class="arrow-right-i"><use xlink:href="#arrow-right"></use></svg>коммунальная техника</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="col-lg-9 col-md-9">
-							<article class="article">
-								<h1>Каталог техники</h1>
-								
-								<div class="row catalog-list">
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i1.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Бортовые автомобили</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i2.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Самосвалы</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i3.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Тягачи</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i4.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Автобетоносмесители</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i5.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Шасси</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i6.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Прицепы и полуприцепы</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i7.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Подъемная техника</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i8.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Спецтехника</h6>
-										</a>
-									</div>
-									<div class="col-lg-4 col-md-4">
-										<a href="/">
-											<img src="img/trucks-i/i9.png" alt="Бортовые автомобили">
-											<h6 class="catalog-title">Коммунальная техника</h6>
-										</a>
-									</div>
-								</div>
-
-								<p>Мы являемся партнерами более 40 крупнейших заводов-изготовителей автотехники, среди которых ПАО «КАМАЗ», ООО «Русские Автобусы», ОАО «УАЗ», ОАО «АВТОВАЗ», Санкт-Петербургский завод «Автогидроподъемник», Арзамасский завод коммунального машиностроения «КОММАШ», Ряжский авторемонтный завод... Мы входим в десятку лучших дилеров этих предприятий, имеем официальные дилерские соглашения. Компания «ТЕХИНКОМ» занимает устойчивое положение на этом рынке, ежемесячно реализует более 300 единиц указанной техники.</p>
-								<p>АО «МРО ТЕХИНКОМ» ­— официальный дилер ООО «Русские Автобусы — группа ГАЗ» с 2000 года. Продажа автобусов в Москве производится непосредственно с наших площадок, по желанию заказчика осуществляется доставка в любую точку РФ.</p>
-								<p>Продажа пассажирских автобусов ведется с предоставлением гарантийного и послегарантийного облуживания.</p>
-								<p>«ТЕХИНКОМ» реализует автобусы ПАЗ, КАВЗ, ЛИАЗ в необходимой каждому клиенту комплектации.</p>
-								<p>Наш ассортимент включает городские, пригородные, междугородние, школьные автобусы и специальные модификации (вахтовый и др.).</p>
-								<p>Также «ТЕХИНКОМ» реализует полный перечень спецтехники на правах официального дилера заводов ГрАЗ, Сеспель, Старт, ЭРМЗ, Бецема, ДСТ-УРАЛ, КОММАШ, Автокран, Автогидроподъемник, FASSI, HIAB и др</p>
-							</article>
+					
+						<div class="aside-b">
+							<a href="configurator.html" class="config-link">Конфигуратор<svg class="arrow-classic-i"><use xlink:href="#arrow-circ"></use></svg></a>
 						</div>
-					</div>
+					
+						<div class="aside-b">
+							<div class="banner">
+								<a href="/"><img src="pic/banner/banner.jpg" alt="Banner"></a>
+								<div class="banner-slider">
+									<div class="banner-slide"><a href="/"><img src="pic/banner/banner2.jpg" alt="Banner"></a></div>
+									<div class="banner-slide"><a href="/"><img src="pic/banner/banner2.jpg" alt="Banner"></a></div>
+									<div class="banner-slide"><a href="/"><img src="pic/banner/banner2.jpg" alt="Banner"></a></div>
+								</div>
+							</div>
+						</div>
+					</aside>
+
+					<article class="article">
+						<h1>Каталог техники</h1>
+						
+						<div class="row catalog-list">
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i1.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Бортовые автомобили</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i2.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Самосвалы</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i3.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Тягачи</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i4.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Автобетоно&shy;смесители</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i5.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Шасси</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i6.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Прицепы и полуприцепы</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i7.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Подъемная техника</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i8.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Спецтехника</h6>
+								</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<a href="/">
+									<img src="img/trucks-i/i9.png" alt="Бортовые автомобили">
+									<h6 class="catalog-title">Коммунальная техника</h6>
+								</a>
+							</div>
+						</div>
+
+						<p>Мы являемся партнерами более 40 крупнейших заводов-изготовителей автотехники, среди которых ПАО «КАМАЗ», ООО «Русские Автобусы», ОАО «УАЗ», ОАО «АВТОВАЗ», Санкт-Петербургский завод «Автогидроподъемник», Арзамасский завод коммунального машиностроения «КОММАШ», Ряжский авторемонтный завод... Мы входим в десятку лучших дилеров этих предприятий, имеем официальные дилерские соглашения. Компания «ТЕХИНКОМ» занимает устойчивое положение на этом рынке, ежемесячно реализует более 300 единиц указанной техники.</p>
+						<p>АО «МРО ТЕХИНКОМ» ­— официальный дилер ООО «Русские Автобусы — группа ГАЗ» с 2000 года. Продажа автобусов в Москве производится непосредственно с наших площадок, по желанию заказчика осуществляется доставка в любую точку РФ.</p>
+						<p>Продажа пассажирских автобусов ведется с предоставлением гарантийного и послегарантийного облуживания.</p>
+						<p>«ТЕХИНКОМ» реализует автобусы ПАЗ, КАВЗ, ЛИАЗ в необходимой каждому клиенту комплектации.</p>
+						<p>Наш ассортимент включает городские, пригородные, междугородние, школьные автобусы и специальные модификации (вахтовый и др.).</p>
+						<p>Также «ТЕХИНКОМ» реализует полный перечень спецтехники на правах официального дилера заводов ГрАЗ, Сеспель, Старт, ЭРМЗ, Бецема, ДСТ-УРАЛ, КОММАШ, Автокран, Автогидроподъемник, FASSI, HIAB и др</p>
+					</article>
 				</div>
 			</div>
 		</main>
@@ -264,58 +265,60 @@
 			</section>
 			<div class="container clearfix">
 				<div class="f-cols">
-					<div class="f-col">
-						<div class="f-title">О компании</div>
-						<div class="f-nav">
-							<a href="/">О заводе КАМАЗ</a>
-							<a href="/">О компании ТЕХИНКОМ</a>
-							<a href="/">Новости</a>
+					<div class="f-nav-cols">
+						<div class="f-col">
+							<div class="f-title">О компании</div>
+							<div class="f-nav">
+								<a href="/">О заводе КАМАЗ</a>
+								<a href="/">О компании ТЕХИНКОМ</a>
+								<a href="/">Новости</a>
+							</div>
 						</div>
-					</div>
-					<div class="f-col">
-						<div class="f-title">Каталог</div>
-						<div class="f-nav">
-							<a href="/">Самосвалы</a>
-							<a href="/">Седельные тягачи</a>
-							<a href="/">Бортовые</a>
-							<a href="/">Шасси</a>
-							<a href="/">Спецтехника</a>
-							<a href="/">Акции</a>
+						<div class="f-col">
+							<div class="f-title">Каталог</div>
+							<div class="f-nav">
+								<a href="/">Самосвалы</a>
+								<a href="/">Седельные тягачи</a>
+								<a href="/">Бортовые</a>
+								<a href="/">Шасси</a>
+								<a href="/">Спецтехника</a>
+								<a href="/">Акции</a>
+							</div>
 						</div>
-					</div>
-					<div class="f-col">
-						<div class="f-title">Кредит и лизинг</div>
-						<div class="f-nav">
-							<a href="/">Кредит</a>
-							<a href="/">Лизинг</a>
+						<div class="f-col">
+							<div class="f-title">Кредит и лизинг</div>
+							<div class="f-nav">
+								<a href="/">Кредит</a>
+								<a href="/">Лизинг</a>
+							</div>
 						</div>
-					</div>
-					<div class="f-col">
-						<div class="f-title">Сервис и запчасти</div>
-						<div class="f-nav">
-							<a href="/">Запасные части</a>
-							<a href="/">Сервис</a>
-							<a href="/">Гарантия</a>
+						<div class="f-col">
+							<div class="f-title">Сервис и запчасти</div>
+							<div class="f-nav">
+								<a href="/">Запасные части</a>
+								<a href="/">Сервис</a>
+								<a href="/">Гарантия</a>
+							</div>
 						</div>
-					</div>
-					<div class="f-col">
-						<div class="f-title">Контакты</div>
-						<div class="f-nav">
-							<a href="/">Контакты</a>
-							<a href="/">Отдел продаж</a>
-							<a href="/">Сервисный центр</a>
-							<a href="/">Схема проезда</a>
+						<div class="f-col">
+							<div class="f-title">Контакты</div>
+							<div class="f-nav">
+								<a href="/">Контакты</a>
+								<a href="/">Отдел продаж</a>
+								<a href="/">Сервисный центр</a>
+								<a href="/">Схема проезда</a>
+							</div>
 						</div>
 					</div>
 		
-					<div class="f-col">
+					<div class="f-col f-contact-col">
 		            <div class="contact-b">
 		           		<a href="tel:+74959743747" class="tel">+7 (495) 974-37-47</a>
 		            </div>
 		            <div class="contact-b"><a href="mailto:info@ikamaz-mail.com" class="email"><svg class="mail-i"><use xlink:href="#mail"></use></svg>info@ikamaz-mail.com</a></div>
 		            <div class="contact-b address-b">
-		            	<svg class="pin2-i"><use xlink:href="#pin2"></use></svg>г. Москва, ул. Расплетина д.5
-							<a href="/" class="link">Схема проезда</a>
+		            	<div class="address-wrap"><svg class="pin2-i"><use xlink:href="#pin2"></use></svg>г. Москва, ул. Расплетина д.5</div>
+		            	<a href="/" class="link">Схема проезда</a>
 		            </div>
 		
 		           	<div class="contact-b">
@@ -335,8 +338,8 @@
 		
 				<div class="copyright">
 					<div class="row">
-						<div class="col-lg-9 col-md-9">Обращаем ваше внимание на то, что информация на данном сайте носит исключительно уведомительный и информационный характер и не является публичной офертой (определяемой в соответствии со статьей 435 и статьей 436 Гражданского кодекса РФ). Наличие и стоимость представленных на сайте автомобилей уточняйте по телефонам отделов продаж, представленных в разделе "Контакты" настоящего ресурса.</div>
-						<div class="col-lg-3 col-md-3 text-right">&copy; 2017. Все права защищены<div class="company-name">ООО «ТЕХИНКОМ-Комтранс»</div>
+						<div class="col-lg-9 col-md-8 col-sm-8">Обращаем ваше внимание на то, что информация на данном сайте носит исключительно уведомительный и информационный характер и не является публичной офертой (определяемой в соответствии со статьей 435 и статьей 436 Гражданского кодекса РФ). Наличие и стоимость представленных на сайте автомобилей уточняйте по телефонам отделов продаж, представленных в разделе "Контакты" настоящего ресурса.</div>
+						<div class="col-lg-3 col-md-4 col-sm-4 text-right">&copy; 2017. Все права защищены<div class="company-name">ООО «ТЕХИНКОМ-Комтранс»</div>
 						</div>
 					</div>
 				</div>
@@ -347,26 +350,10 @@
 		
 		<!-- Modals -->
 		
-		<!-- Modal -->
-		
-		<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="success-modal" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"><svg class="close-i"><use xlink:href="#close"></use></svg></span>
-					</button>
-					<div class="modal-header">
-						<h5 class="modal-title" id="success-modal-title">Сообщение отправлено</h5>
-						<p class="modal-subtitle">Мы скоро с вами свяжемся</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		
 		<div class="modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callback-modal" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<div class="modal-header">
 						<h5 class="modal-title" id="callback-modal-title">Заказать звонок</h5>
 					</div>
@@ -374,28 +361,29 @@
 						<form action="#" class="contact-form">
 							<div class="form-group">
 								<label>Представьтесь пожалуйста</label>
-								<input type="text" name="name">
+								<input type="text" name="name" placeholder="Ваше имя">
 							</div>
 							<div class="form-group">
-								<label>Введите ваш номер</label>
+								<label>Номер телефона</label>
 								<input type="tel" name="phone" required>
 							</div>
 							<div class="form-group">
-								<label>Введите ваш e-mail</label>
-								<input type="email" name="email">
+								<label>Ваш e-mail</label>
+								<input type="email" name="email" placeholder="e-mail" required>
 							</div>
 							<div class="form-group">
 								<label>Введите ваше сообщение</label>
-								<textarea name="message">Сообщение</textarea>
+								<textarea name="message" placeholder="Сообщение"></textarea>
 							</div>
 							<div class="form-group">
-								<button type="submit" class="btn btn-submit">Отправить <svg class="send-mail"><use xlink:href="#send-mail"></use></svg></button>
+								<button type="submit" class="btn btn-submit">Отправить</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
+		
 		
 		<link rel="stylesheet" href="css/main.min.css">
 		<script src="js/scripts.min.js"></script>

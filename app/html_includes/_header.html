@@ -6,9 +6,14 @@
 			<div class="top-b site-title">ООО «ТЕХИНКОМ-Комтранс» — официальный дилер ПАО «КАМАЗ»</div>
 			<div class="top-b">
 				<div class="search">
+					<button type="button" class="search-mob-btn">
+						<svg class="lens-i"><use xlink:href="#lens"></use></svg>
+					</button>
 					<form action="#" class="search-form">
-						<input type="text" name="search" class="toggle" id="search-input">
-						<button type="submit" name="submit" class="search-btn"><svg class="lens-i"><use xlink:href="#lens"></use></svg></button>
+						<input type="text" name="search" class="toggle" id="search-input" placeholder="Поиск по сайту...">
+						<button type="submit" name="submit" class="search-btn">
+							<svg class="lens-i"><use xlink:href="#lens"></use></svg>
+						</button>
 					</form>
 				</div>
 			</div>
@@ -27,12 +32,12 @@
 				<svg class="pin-i"><use xlink:href="#pin"></use></svg>
 				<div class="contact-data"><a href="/">Санкт-Петербург</a> Грузовой проезд, дом 27<div class="time">9:00-18:00 пн-пт</div></div>
 			</div>
-			<div class="contact-b">
+			<div class="contact-b contact-callback">
+				<button type="button" data-toggle="modal" data-target="#callback-modal" class="btn">Обратный звонок</button>
+			</div>
+			<div class="contact-b contact-tel">
 				<div class="contact-tel-sign">Многоканальный телефон</div>
 				<a href="tel:+74959743747" class="tel"> +7 (495) 974-37-47</a>
-			</div>
-			<div class="contact-b">
-				<button type="button" data-toggle="modal" data-target="modal-callback" class="btn">Обратный звонок</button>
 			</div>
 		</div>
 
